@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i8b-Pc-d1t">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="185" y="187" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H24-eu-xhU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="i8b-Pc-d1t"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="i8b-Pc-d1t"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <segue destination="JLl-fv-7aZ" kind="show" identifier="segue1" id="A8q-ei-KsN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168" y="337"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="Rvu-Zb-vP1">
+            <objects>
+                <viewController id="JLl-fv-7aZ" customClass="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="moM-Ns-NZV"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wop-Cl-CNg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JSQ-94-VY3">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQR-AQ-IYU">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="26" y="20" width="34" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="backButton:" destination="JLl-fv-7aZ" eventType="touchUpInside" id="izb-aF-PCf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fs-S7-cit">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Up"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="185" y="414" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="upButtonPressed:" destination="JLl-fv-7aZ" eventType="touchDown" id="0CV-jd-Tb9"/>
+                                    <action selector="upButtonReleased:" destination="JLl-fv-7aZ" eventType="touchUpOutside" id="omE-dY-y0p"/>
+                                    <action selector="upButtonReleased:" destination="JLl-fv-7aZ" eventType="touchUpInside" id="vjJ-Fh-OdB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3II-4e-3Jr">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Right"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="283" y="465" width="36" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="rightButtonPressed:" destination="JLl-fv-7aZ" eventType="touchDown" id="vbD-RF-zcO"/>
+                                    <action selector="rightButtonReleased:" destination="JLl-fv-7aZ" eventType="touchUpOutside" id="72k-Uw-uNP"/>
+                                    <action selector="rightButtonReleased:" destination="JLl-fv-7aZ" eventType="touchUpInside" id="vUb-1n-ra7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKR-GL-fFg">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Left"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="91" y="465" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="leftButtonPressed:" destination="JLl-fv-7aZ" eventType="touchDown" id="aIo-LM-QnR"/>
+                                    <action selector="leftButtonReleased:" destination="JLl-fv-7aZ" eventType="touchUpOutside" id="8x8-Ji-frI"/>
+                                    <action selector="leftButtonReleased:" destination="JLl-fv-7aZ" eventType="touchUpInside" id="NoC-rf-A2u"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball.png" translatesAutoresizingMaskIntoConstraints="NO" id="vPU-sr-zvC">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="168" y="141" width="64" height="64"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wo-eg-gWe">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Down"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="181" y="516" width="39" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="downButtonPressed:" destination="JLl-fv-7aZ" eventType="touchDown" id="BYE-ew-mtr"/>
+                                    <action selector="downButtonReleased:" destination="JLl-fv-7aZ" eventType="touchUpInside" id="6P4-N4-WBi"/>
+                                    <action selector="downButtonReleased:" destination="JLl-fv-7aZ" eventType="touchUpOutside" id="n9C-0J-cyW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="oQR-AQ-IYU"/>
+                                <exclude reference="0fs-S7-cit"/>
+                                <exclude reference="3II-4e-3Jr"/>
+                                <exclude reference="JKR-GL-fFg"/>
+                                <exclude reference="vPU-sr-zvC"/>
+                                <exclude reference="5Wo-eg-gWe"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="oQR-AQ-IYU"/>
+                                <include reference="0fs-S7-cit"/>
+                                <include reference="3II-4e-3Jr"/>
+                                <include reference="JKR-GL-fFg"/>
+                                <include reference="vPU-sr-zvC"/>
+                                <include reference="5Wo-eg-gWe"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="ballImage" destination="vPU-sr-zvC" id="NWd-ls-RuN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r2s-cn-OkW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="891" y="337"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ball.png" width="64" height="64"/>
+    </resources>
+</document>
